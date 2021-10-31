@@ -21,7 +21,7 @@ User Can :-
 ## Access the website
 Need the latest browser to be able to View
 
-Follow this link https://Awwards-Zonenyota.herokuapp.com/
+Follow this link https://awwards-zonenyota.herokuapp.com/
 
 It is hosted by heroku
 
