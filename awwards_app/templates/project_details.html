@@ -32,8 +32,6 @@
     </table>
       <h2 class="text-success">{{ project.title }}</h2>
       <P>{{ project.description}}</P>
-      <h2>Technologies used</h2>
-      <p>{{project.technologies_used}}</p>
       <!--Display projects project images  -->
       <img src="{{project.project_image.url}}" class="img-thumbnail" alt="Image" onclick="window.open(this.src)">
       <div class="row">
@@ -47,6 +45,11 @@
           <P>Posted on: <strong>{{project.posted_on|date}}</strong> by <span class="text-success">{{project.user.username}}</span>
         </div>
       </div>
+      <h2>Technologies used</h2>
+      <p>{{project.technologies_used}}</p>
+
+      <h2>Rating</h2>
+
       {% if rating_status %}
       {% else %}
       {% if user.is_authenticated %}
