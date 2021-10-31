@@ -60,7 +60,15 @@ python manage.py makemigrations awwards_app
  python manage.py test photo
 ```
 Open the application on your browser `127.0.0.1:8000`.  
-  
+
+---
+
+## API
+### Get all Projects -> [see json list here](https://awwards-zonenyota.herokuapp.com/api/projects/?format=json)
+
+### Get all Profiles -> [see json list here](https://awwards-zonenyota.herokuapp.com/api/profiles/?format=json)
+
+---
   
 ## Technology used  
   
