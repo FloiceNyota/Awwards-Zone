@@ -20,30 +20,21 @@ img {
 .btn-success,.btn-danger {
   width: 3cm !important;
 }
-.banner {
-  background-image: url('https://res.cloudinary.com/dbos9xidr/image/upload/v1626728218/img_awards_banner_jcnk8r.jpg');
-  height: 60vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding-top: 10%;
-}
 
 .link {
   margin: 1rem 0 1rem 0 !important;
 }
 .live-link {
-  background-color: #062036;
-  color: white;
+  background-color: #22a594;
+  color: rgb(177, 68, 113);
   border-radius: 8px;
 }
 .title {
   color: #4888BE;
 }
 th {
-  background-color: #021025 !important;
+  background-color: #ecf0f8 !important;
+  color: #058F03;
 }
 .average,.user,.content,.design,.usability {
   background-color: #032541 !important;
@@ -53,9 +44,9 @@ th {
   color: #058F03;
 }
 nav {
-  background-color: #021025 !important;
+  background-color: #b8bbc0 !important;
   color: #058F03 !important;
-  height: 8vh !important;
+  height: 10vh !important;
   font-size: 25;
   padding-top: 1vh;
 }
