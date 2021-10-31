@@ -9,8 +9,6 @@
       <img class="profile_picture"
          src="{{ user.profile.profile_picture.url }}" style="height: 20vh; width:20vh;" alt="{{ profile.name }}">
          {% else %}
-        <img class="profile_picture"
-           src="https://res.cloudinary.com/dbos9xidr/image/upload/v1626854682/zvtfufhexa8lqqqgcdt3.png" style="height: 20vh; width:20vh;" alt="{{ profile.name }}">
            {% endif %}
 
         <p class="">{{user.username}}</p>
@@ -45,15 +43,13 @@
           <div class="profile">
             <div class="row">
               <div class="col-md-8">
-                <p class="name">By <a class="username" style="margin-top: 5px;" href="{% url 'users_profile' project.user.id %}">{{project.user.username}}</a></p>
+                <p class="name">Owner <a class="username" style="margin-top: 5px;" href="{% url 'users_profile' project.user.id %}">{{project.user.username}}</a></p>
               </div>
               <div class="col-md-4">
                 {% if user.profile.profile_picture.url %}
                 <p><a href="{% url 'users_profile' user.id %}"><img class="profile_picture"
                   src="{{ user.profile.profile_picture.url }}" alt=""></a></p>
                   {% else %}
-                  <a href="{% url 'users_profile' user.id %}"><img class="profile_picture"
-                    src="https://res.cloudinary.com/dbos9xidr/image/upload/v1626854682/zvtfufhexa8lqqqgcdt3.png" alt=""></a>
                     {% endif %}
                 </div>
             </div>
