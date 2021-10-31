@@ -142,5 +142,46 @@ def search(request):
     message = "You haven't searched for any term"
     return render(request,'search.html',{"message":message})
 
+@login_required
+def post_project(request):
+  if request.method == 'POST':
+    post_form = PostProjectForm(request.POST,request.FILES) 
+    if post_form.is_valid():
+      new_post = post_form.save(commit = False)
+      new_post.user = request.user
+      new_post.save()
+      return redirect('home')
 
+  else:
+    post_form = PostProjectForm()
+  return render(request,'post_project.html',{"post_form":post_form})
+
+@login_required
+def users_profile(request,pk):
+  user = User.objects.get(pk = pk)
+  projects = Project.objects.filter(user = user)
+  current_user = request.user
+  
+  return render(request,'profile/users_profile.html',{"user":user,"projects":projects,"current_user":current_user})
+
+@login_required
+def delete(request,project_id):
+  current_user = request.user
+  project = Project.objects.get(pk=project_id)
+  if project:
+    project.delete_project()
+  return redirect('home')
+
+#API Views
+class ProjectList(APIView):
+  def get(self,request,format=None):
+    projects=Project.objects.all()
+    serializers=ProjectSerializer(projects,many=True)
+    return Response(serializers.data)
+
+class ProfileList(APIView):
+  def get(self,request,format=None):
+    profiles=Profile.objects.all()
+    serializers=ProfileSerializer(profiles,many=True)
+    return Response(serializers.data)
 
