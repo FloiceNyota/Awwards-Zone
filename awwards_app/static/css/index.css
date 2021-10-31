@@ -1,10 +1,8 @@
 body {
   font-size: 20px;
-  background-color: #2E3847;
-  color: #c26a06;
 }
 .username:hover {
-  color: #c26a06 !important;
+  color: yellow !important;
 }
 img {
   width: 100%;
@@ -87,7 +85,7 @@ h2,h1 {
 }
 .link:hover {
   color: #021025;
-  background-color: #c26a06;
+  background-color: yellow;
   font-weight: 900;
 }
 .footer {
